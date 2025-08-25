@@ -36,3 +36,16 @@ build/
 
 ### Mac OS ###
 .DS_Store
+ --- Extras para FallaApp ---
+
+# Base de datos local (no subir tus datos de pruebas)
+data/
+*.db
+
+# Ejecutables y binarios
+*.exe
+*.jar
+*.class
+
+# Librerías externas 
+lib/
