@@ -42,6 +42,7 @@ FallaApp/
    ```
   
 2.Importar el proyecto en IDE con Java.
+
 3.Ejecutar la clase MainApp.java
 
 
@@ -49,6 +50,7 @@ FallaApp/
 ## Autor
 
 David Ferrer Sapiña
+
 Contacto: [davidferrersapinya@gmail.com](mailto:davidferrersapinya@gmail.com)
 
 
