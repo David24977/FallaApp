@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.4" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="es.david.fallaapp.ui.FalleroFormController">
+    <center>
+        <GridPane hgap="10" vgap="10">
+            <padding><Insets topRightBottomLeft="12"/></padding>
+
+            <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtNombre" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="280"/>
+
+            <Label text="DNI:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtDni" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Dirección:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtDireccion" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtEmail" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Teléfono:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtTelefono" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <Label text="Categoría:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="cmbCategoria" GridPane.rowIndex="5" GridPane.columnIndex="1" prefWidth="180"/>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <ToolBar>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="Cancelar" onAction="#onCancel"/>
+            <Button text="Guardar" onAction="#onSave" defaultButton="true"/>
+        </ToolBar>
+    </bottom>
+</BorderPane>

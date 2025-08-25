@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="es.david.fallaapp.ui.CuotasController">
+
+    <top>
+        <HBox spacing="10" padding="10">
+            <Label text="Buscar ejercicio:"/>
+            <TextField fx:id="txtBuscar" promptText="Ej: 2025"/>
+            <Button text="Recargar" onAction="#onReload"/>
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="table">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                <TableColumn fx:id="colEjercicio" text="Ejercicio" prefWidth="100"/>
+                <TableColumn fx:id="colInfantil" text="Infantil" prefWidth="80"/>
+                <TableColumn fx:id="colAlevin" text="Alevín" prefWidth="80"/>
+                <TableColumn fx:id="colCadete" text="Cadete" prefWidth="80"/>
+                <TableColumn fx:id="colMayor" text="Mayor" prefWidth="80"/>
+                <TableColumn fx:id="colActivo" text="Activo" prefWidth="60"/>
+                <TableColumn fx:id="colObs" text="Observaciones" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <Label fx:id="statusLabel" padding="10"/>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.4" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="es.david.fallaapp.ui.MainController">
+    <top>
+        <ToolBar>
+            <Label text="Falleros" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+            <Separator orientation="VERTICAL"/>
+
+            <Button text="Insertar fallero" onAction="#onInsert"/>
+            <Button text="Eliminar seleccionado" onAction="#onDeleteSelected"/>
+
+            <Separator orientation="VERTICAL"/>
+            <!-- Botón para abrir cuotas -->
+            <Button text="Gestionar cuotas" onAction="#openCuotas"
+
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+
+            <Separator orientation="VERTICAL"/>
+
+            <Button text="Pagos de cuotas" onAction="#abrirPagos"
+
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+
+            <Separator orientation="VERTICAL"/>
+
+            <Button text="Gestionar recompensas" onAction="#openRecompensas"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+
+            <Separator orientation="VERTICAL"/>
+
+            <Label text="Buscar:"/>
+            <TextField fx:id="txtBuscar" promptText="Nombre o DNI..." prefWidth="220"/>
+
+            <Button text="Exportar PDF Falleros" onAction="#onExportCensoPdf"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+
+
+
+            <Button text="Recargar" onAction="#onReload"/>
+            <Label fx:id="statusLabel" text="Listo" />
+        </ToolBar>
+
+    </top>
+
+    <center>
+        <TableView fx:id="table" editable="true" prefHeight="400">
+            <columns>
+                <TableColumn fx:id="colNumeroCenso" text="NºCenso" prefWidth="60"/>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+                <TableColumn fx:id="colCargo" text="Cargo" prefWidth="150"/>
+                <TableColumn fx:id="colDni" text="DNI" prefWidth="100"/>
+                <TableColumn fx:id="colDireccion" text="Dirección" prefWidth="200"/>
+                <TableColumn fx:id="colEmail" text="Email" prefWidth="200"/>
+                <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="100"/>
+                <TableColumn fx:id="colCategoria" text="Categoría" prefWidth="100"/>
+                <TableColumn fx:id="colFechaAlta" text="Fecha alta" prefWidth="110"/>
+                <TableColumn fx:id="colAniosPrevios" text="Años previos" prefWidth="110"/>
+                <TableColumn fx:id="colAnios" text="Años" prefWidth="50"/>
+
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
